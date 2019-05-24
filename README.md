@@ -20,8 +20,6 @@ The bootstrapping process for the cluster looks like the following:
 The result of this bootstrapping process is a fully running OpenShift cluster.  The cluster will then download and configure the remaining components needed for day-to-day operation via the cluster version operator including the automated creation of compute machines on supported platforms.
 
 
-
-
 # Installation steps:
 1. Login to https://cloud.redhat.com/openshift/install and download ocp4 installer. You can access the following direct download link https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/
 
@@ -30,20 +28,21 @@ The result of this bootstrapping process is a fully running OpenShift cluster.  
 3. Have your installation secretes and execute the following command on your terminal  
   
 ./openshift-install create cluster
-  >>Choose your ssh key
-  >>Choose your installation type for now it's only aws
-  >>Specify your cluster name
-  >>Specify your domain name, configured as router 53 service in aws
-  >>Enter your installation secrets  and hold your breath for an automated installation
+
+  - choose your ssh key
+  - choose your installation type for now it's only aws
+  - specify your cluster name
+  - specify your domain name, configured as router 53 service in aws
+  - enter your installation secrets and hold your breath for an automated installation of a production grade cluster
 
 
-Congratulations your Openshift4 cluster is up and running in AWS. 
+# Congratulations your Openshift4 cluster is up and running in AWS. 
 
 You can access your console as per the installer process log output on your screen. Connection details for your cluster is also available in the .openshift_install.log file after the installation completed.
 
 Should you have any trouble in access the cluster using CLI please check your kubeconfig file path and export the KUBECONFIG variable correctly for example below KUBECONFIG=/your_working_directory/auth/kubeconfig
 
 
-##Cleanup
+# Cleanup
 Destroy the cluster and release associated resources with:
  openshift-install destroy cluster

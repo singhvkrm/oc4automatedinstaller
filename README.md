@@ -25,15 +25,17 @@ The result of this bootstrapping process is a fully running OpenShift cluster.  
 
 2. Setup your AWS account with the openshift cluster domain name under router 53 service and copy your AWS access key.
 
-3. Have your installation secretes and execute the following command on your terminal  
-  
+3. Have your installation secretes and execute the following command on your terminal and follow the installer instructions
+ 
+
 ./openshift-install create cluster
 
-  - choose your ssh key
-  - choose your installation type for now it's only aws
-  - specify your cluster name
-  - specify your domain name, configured as router 53 service in aws
-  - enter your installation secrets and hold your breath for an automated installation of a production grade cluster
+- Choose your ssh key
+- Choose your platform installation type for now it's only “aws”
+- Specify your Region
+- Specify your Base Domain, configured as router 53 service in aws
+- Specify your Cluster name
+- Enter your installation secrets  and hold your breath for an automated installation
 
 
 # Congratulations your Openshift4 cluster is up and running in AWS. 

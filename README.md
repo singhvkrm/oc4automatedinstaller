@@ -1,4 +1,5 @@
-# oc4automatedinstaller
+# Openshift 4 Automated Installer
+
 Lets test drive how cool is the Openshift 4 automated installer works.
 
 ##Openshift4 1 2 3 start guide
